@@ -1,0 +1,21 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Verdana, sans-serif;
+}
+
+body {
+  background-color: #edeff1;
+  color: #232323;
+}
+
+/* Layout da lista de produtos */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.25rem;
+  margin: 6rem 4rem 3rem;
+  padding: 0 0.625rem;
+}

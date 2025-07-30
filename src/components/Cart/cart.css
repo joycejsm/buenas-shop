@@ -1,0 +1,97 @@
+/* Carrinho ("escondido" na lateral direita) */
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: #0000007a;
+  backdrop-filter: blur(0.2rem);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 100;
+}
+
+.cart-overlay.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Off-canvas lateral direito */
+.cart-offcanvas {
+  position: fixed;
+  top: 0;
+  right: -36rem;
+  width: 36rem;
+  max-width: 90vw;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: -0.25rem 0 0.75rem #2c3e5014;
+  padding: 2rem;
+  padding-right: 4rem;
+  z-index: 200;
+  transition: right 0.35s;
+  display: flex;
+  flex-direction: column;
+
+  h2, hr {
+    margin-bottom: 1rem;
+  }
+
+  hr {
+    border: solid 1px #e5e5e5;
+  }
+
+  h3 {
+    margin-top: 1.25rem;
+    text-align: right;
+    font-size: 1.5rem;
+    color: #8e44ad;
+  }
+}
+
+.cart-offcanvas.open {
+  right: 0;
+}
+
+.cart-close {
+  position: absolute;
+  top: 1rem;
+  right: 4rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #999999;
+  transition: 0.3s ease;
+
+  &:hover {
+    color: #232323;
+  }
+}
+
+.cart-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.2rem;
+  border: solid 1px #c9c9c9;
+  border-radius: 0.3rem;
+  padding: 0.8rem;
+}
+
+.cart-remove-btn {
+  position: absolute;
+  right: 0.5rem;
+  top: -0.1rem;
+  background: none;
+  border: none;
+  color: #999999;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &:hover {
+    color: #c0392b;
+  }
+}
