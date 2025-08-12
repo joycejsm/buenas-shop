@@ -12,10 +12,11 @@ body {
 }
 
 /* Layout da lista de produtos */
-.product-list {
+.products-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   gap: 1.25rem;
   margin: 6rem 4rem 3rem;
   padding: 0 0.625rem;
+  /* flex-wrap: wrap; */
 }
